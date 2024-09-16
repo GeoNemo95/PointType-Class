@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Pnt_Type.cpp"
+#include "Pnt_Type.h"
 
 using namespace std;
 
