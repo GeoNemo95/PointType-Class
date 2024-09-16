@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Pnt_Type.h"
+#include "Crcl_Type.h"
 
 using namespace std;
 
