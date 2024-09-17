@@ -16,14 +16,10 @@ class Crcl_Type{
     Crcl_Type(Pnt_Type<T>, Pnt_Type<T>);
     void set_cen_pnt(T ,T );
     void set_out_pnt(T ,T );
-    Pnt_Type<T> fnd_cen_pnt();
-    Pnt_Type<T> fnd_out_pnt();
-    void print_cen_pnt();
-    void print_out_pnt();
     double calc_rad();
     double calc_area();
     double calc_circum();
-    void print_cir();
+    void print_crcl();
 };
 
 template <class T>
@@ -40,32 +36,14 @@ Crcl_Type<T>::Crcl_Type(Pnt_Type<T> cen, Pnt_Type<T> out): cen_pnt(cen), out_pnt
 
 template <class T>
 void Crcl_Type<T>::set_cen_pnt(T x_cen, T y_cen){
-  cen_pnt.set_pnt(x_cen,y_cen);
+  cen_pnt.set_x(x_cen);
+  cen_pnt.set_y(y_cen);
 }
 
 template <class T>
 void Crcl_Type<T>::set_out_pnt(T x_out, T y_out){
-  out_pnt.set_pnt(x_out,y_out);
-}
-
-template <class T>
-Pnt_Type<T> Crcl_Type<T>::fnd_cen_pnt(){
-  return cen_pnt;
-}
-
-template <class T>
-Pnt_Type<T> Crcl_Type<T>::fnd_out_pnt(){
-  return out_pnt;
-}
-
-template <class T>
-void Crcl_Type<T>::print_cen_pnt(){
-  cen_pnt.print();
-}
-
-template <class T>
-void Crcl_Type<T>::print_out_pnt(){
-  out_pnt.print();
+  out_pnt.set_x(x_out);
+  out_pnt.set_y(y_out);
 }
 
 template <class T>
@@ -84,7 +62,7 @@ double Crcl_Type<T>::calc_circum(){
 }
 
 template <class T>
-void Crcl_Type<T>::print_cir(){
+void Crcl_Type<T>::print_crcl(){
   cout << "Center: ";
   cen_pnt.print();
   cout << "Out: ";
