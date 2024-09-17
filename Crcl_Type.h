@@ -5,7 +5,8 @@
 using namespace std;
 template <class T>
 
-class Crcl_Type{
+class Crcl_Type
+{
   private:
     Pnt_Type<T> cen_pnt;
     Pnt_Type<T> out_pnt;
