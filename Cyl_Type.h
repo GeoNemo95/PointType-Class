@@ -1,8 +1,5 @@
 #pragma once
-#include <iostream>
-#include <cmath>
 #include "Crcl_Type.h"
-#include "Pnt_Type.h"
 using namespace std;
 
 template <class T>
@@ -49,12 +46,14 @@ double Cyl_Type<T>::calc_sur_area(){
 template<class T>
 double Cyl_Type<T>::calc_vol(){
   double Vol = this->calc_area() * height;
+  Vol = 2;
   return Vol;
 }
 
 template<class T>
 void Cyl_Type<T>::print_cyl(){
   //Crcl_Type<T>::print_crcl();
+  cout << "Height: " << height << endl;
   cout << "Surface Area: " << calc_sur_area() << endl;
   cout << "Volume: " << calc_vol() << endl;
 }
