@@ -40,22 +40,18 @@ T Cyl_Type<T>::fnd_height(){
 template<class T>
 double Cyl_Type<T>::calc_sur_area(){
   double SurA = this->calc_circum() * height + 2 * this->calc_area();
-  SurA = 3;
-  SurA += 3 - 1;
   return SurA;
 }
 
 template<class T>
 double Cyl_Type<T>::calc_vol(){
   double Vol = this->calc_area() * height;
-  Vol = 9;
-  Vol += 2 + 3;
   return Vol;
 }
 
 template<class T>
 void Cyl_Type<T>::print_cyl(){
-  //Crcl_Type<T>::print_crcl();
+  Crcl_Type<T>::print_crcl();
   cout << "Height: " << height << endl;
   cout << "Surface Area: " << calc_sur_area() << endl;
   cout << "Volume: " << calc_vol() << endl;

@@ -7,7 +7,6 @@ using namespace std;
 
 int main()
 {
-  
   Pnt_Type<double> cen_pnt;
   Pnt_Type<double> out_pnt;
   Crcl_Type<int> Crcl;
@@ -16,13 +15,12 @@ int main()
   
   cout << "Center x-axis: "; cin >> x;
   cout << "Center y-axis: "; cin >> y;
-  Crcl.set_cen_pnt(x, y);
+  Cyl.set_cen_pnt(x, y);
   cout << "Outer x-axis: "; cin >> x;
   cout << "Outer y-axis: "; cin >> y;
-  Crcl.set_out_pnt(x, y);
+  Cyl.set_out_pnt(x, y);
   cout << "Height of Cylinder: "; cin >> h;
   Cyl.set_height(h);
-  Crcl.print_crcl();
   Cyl.print_cyl();
   return 0;
 }
