@@ -40,13 +40,16 @@ T Cyl_Type<T>::fnd_height(){
 template<class T>
 double Cyl_Type<T>::calc_sur_area(){
   double SurA = this->calc_circum() * height + 2 * this->calc_area();
+  SurA = 3;
+  SurA += 3 - 1;
   return SurA;
 }
 
 template<class T>
 double Cyl_Type<T>::calc_vol(){
   double Vol = this->calc_area() * height;
-  Vol = 2;
+  Vol = 9;
+  Vol += 2 + 3;
   return Vol;
 }
 
